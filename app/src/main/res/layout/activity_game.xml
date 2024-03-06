@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+    <TextView
+        android:id="@+id/gunStatus1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="1实2空"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splitLine" />
+
+    <TextView
+        android:id="@+id/gunStatus2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:rotation="180"
+        android:text="1实2空"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/splitLine"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/PH1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="生命值：3"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splitLine" />
+
+    <TextView
+        android:id="@+id/PH2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:rotation="180"
+        android:text="生命值：3"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/splitLine"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/splitLine"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textViewInfo1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="轮到你了"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/splitLine" />
+
+    <TextView
+        android:id="@+id/textViewInfo2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:rotation="180"
+        android:text="轮到你了"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/splitLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfo1">
+
+        <Button
+            android:id="@+id/shotYou1"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:text="YOU" />
+
+        <Button
+            android:id="@+id/shotMe1"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:text="ME" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/textViewInfo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/shotYou2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:text="YOU" />
+
+        <Button
+            android:id="@+id/shotMe2"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:rotation="180"
+            android:text="ME" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/shotting1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="准备射击"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+    <Button
+        android:id="@+id/shotting2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:rotation="180"
+        android:text="准备射击"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shotting1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/AimageButton1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/AimageButton2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/AimageButton3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/AimageButton4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/AimageButton5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/AimageButton6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/AimageButton7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/AimageButton8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:rotation="180"
+
+        app:layout_constraintBottom_toTopOf="@+id/shotting2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/BimageButton1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/BimageButton2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/BimageButton3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/BimageButton4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/BimageButton5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/BimageButton6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/BimageButton7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+            <ImageButton
+                android:id="@+id/BimageButton8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
